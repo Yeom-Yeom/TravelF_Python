@@ -59,8 +59,8 @@ def recommend():
                 if i<9 :
                     rec += "/" 
             
-            return redirect('http://http://ec2-3-39-1-201.ap-northeast-2.compute.amazonaws.com:8081/recommended/rec_img/?id='+rec)
+            return redirect('http://ec2-3-39-1-201.ap-northeast-2.compute.amazonaws.com:8081/recommended/rec_img/?id='+rec)
 
 
 if __name__=="__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="http://ec2-3-39-1-201.ap-northeast-2.compute.amazonaws.com", port=5000, debug=True)

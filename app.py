@@ -59,7 +59,7 @@ def recommend():
                 if i<9 :
                     rec += "/" 
             
-            return redirect('http://travelf.site/recommended/rec_img/?id='+rec)
+            return redirect('http://http://ec2-3-39-1-201.ap-northeast-2.compute.amazonaws.com:8081/recommended/rec_img/?id='+rec)
 
 
 if __name__=="__main__":

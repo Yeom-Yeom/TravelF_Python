@@ -12,9 +12,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=['GET'])
 def recommend():
-    test = pd.read_csv(
-        r'D:/TravelF/src/main/webapp/crawling/recommended.csv',
-        encoding='utf-8', low_memory=False)
+    test = pd.read_csv('recommended.csv',encoding='utf-8', low_memory=False)
     test = test[['id', 'title', 'file_name', 'hashtag', 'area']]
     test = test.dropna()
     
@@ -59,7 +57,7 @@ def recommend():
                 if i<9 :
                     rec += "/" 
             
-            return redirect('http://localhost:8081/recommended/rec_img/?id='+rec)
+            return redirect('http://ec2-3-39-1-201.ap-northeast-2.compute.amazonaws.com:8082/recommended/rec_img/?id='+rec)
 
 
 if __name__=="__main__":

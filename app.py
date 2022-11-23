@@ -63,4 +63,4 @@ def recommend():
 
 
 if __name__=="__main__":
-    app.run(host="http://ec2-3-39-1-201.ap-northeast-2.compute.amazonaws.com", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
